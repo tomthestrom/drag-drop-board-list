@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Drag&Drop Board</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">
+           <a class="header__link" href="https://github.com/tomthestrom/drag-drop-board" target="blank">
+            Drag&Drop
+           </a> 
+        </h1>
+    </header>
+    <main class="board">
+        <div is="list-deck" class="list-deck">
+            <card-list id="1" class="list-deck__list" draggable="true" data-draggable-list>
+                <div class="list-deck__list-header">
+                    <h2 class="list-deck__title">List 1</h2>
+                </div>
+                <ul class="list-deck__card-list">
+                    <li class="list-deck__card">
+                        <h3 class="list-deck__card-title">
+                            Card 1
+                        </h3>
+                        <button class="btn btn--list btn--edit-card">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#edit"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="list-deck__card">
+                        <h3 class="list-deck__card-title">
+                            Hello
+                        </h3>
+                        <button class="btn btn--list btn--edit-card">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#edit"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="list-deck__card">
+                        <h3 class="list-deck__card-title">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat autem libero nemo, necessitatibus inventore incidunt cumque provident vero voluptatem numquam dignissimos nesciunt, ullam saepe iste. Ipsum sapiente distinctio enim.
+                        </h3>
+                        <button class="btn btn--list btn--edit-card">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#edit"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <div class="list-deck__list-footer">
+                    <div class="list-deck__add-card">
+                        <button class="btn btn--list btn--add-card">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#plus"></use>
+                            </svg>
+                            <span>Add another card</span>
+                        </button>
+                        <button title="Create from template..." class="btn btn--list">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#browser"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </card-list>
+            <!-- List 2 -->
+            <card-list id="2" is="card-list" class="list-deck__list" draggable="true" data-draggable-list>
+                <div class="list-deck__list-header">
+                    <h2 class="list-deck__title">List 2</h2>
+                </div>
+                <ul class="list-deck__card-list">
+                    <li class="list-deck__card">
+                        <h3 class="list-deck__card-title">
+                            Card 1
+                        </h3>
+                        <button class="btn btn--list btn--edit-card">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#edit"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="list-deck__card">
+                        <h3 class="list-deck__card-title">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat autem libero nemo, necessitatibus inventore incidunt cumque provident vero voluptatem numquam dignissimos nesciunt, ullam saepe iste. Ipsum sapiente distinctio enim.
+                        </h3>
+                        <button class="btn btn--list btn--edit-card">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#edit"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="list-deck__card">
+                        <h3 class="list-deck__card-title">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        </h3>
+                        <button class="btn btn--list btn--edit-card">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#edit"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <div class="list-deck__list-footer">
+                    <div class="list-deck__add-card">
+                        <button class="btn btn--list btn--add-card">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#plus"></use>
+                            </svg>
+                            <span>Add another card</span>
+                        </button>
+                        <button title="Create from template..." class="btn btn--list">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#browser"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </card-list>
+            <!-- List 3 -->
+            <card-list id="3" is="card-list" class="list-deck__list" draggable="true" data-draggable-list>
+                <div class="list-deck__list-header">
+                    <h2 class="list-deck__title ">List 3</h2>
+                </div>
+                <ul class="list-deck__card-list">
+                    <li class="list-deck__card">
+                        <h3 class="list-deck__card-title">
+                            Card 1
+                        </h3>
+                        <button class="btn btn--list btn--edit-card">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#edit"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="list-deck__card">
+                        <h3 class="list-deck__card-title">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat autem libero nemo, necessitatibus inventore incidunt cumque provident vero voluptatem numquam dignissimos nesciunt, ullam saepe iste. Ipsum sapiente distinctio enim.
+                        </h3>
+                        <button class="btn btn--list btn--edit-card">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#edit"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <div class="list-deck__list-footer">
+                    <div class="list-deck__add-card">
+                        <button class="btn btn--list btn--add-card">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#plus"></use>
+                            </svg>
+                            <span>Add another card</span>
+                        </button>
+                        <button title="Create from template..." class="btn btn--list">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#browser"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </card-list>
+            <!-- List 4 -->
+            <card-list  id="4" is="card-list" class="list-deck__list" draggable="true" data-draggable-list>
+                <div class="list-deck__list-header">
+                    <h2 class="list-deck__title ">List 4</h2>
+                </div>
+                <ul class="list-deck__card-list">
+                    <li class="list-deck__card">
+                        <h3 class="list-deck__card-title">
+                            Card 1
+                        </h3>
+                        <button class="btn btn--list btn--edit-card">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#edit"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <div class="list-deck__list-footer">
+                    <div class="list-deck__add-card">
+                        <button class="btn btn--list btn--add-card">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#plus"></use>
+                            </svg>
+                            <span>Add another card</span>
+                        </button>
+                        <button title="Create from template..." class="btn btn--list">
+                            <svg class="list-deck__icon">
+                                <use xlink:href="./icons/sprite.svg#browser"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </card-list>
+        <button class="btn btn--bman btn--add-another-list">
+            <svg>
+                <use xlink:href="./icons/sprite.svg#plus"></use>
+            </svg>
+            <span>Add another list</span>
+        </button>
+        
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>          

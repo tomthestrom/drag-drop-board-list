@@ -1,0 +1,232 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --color-primary-blue: #0079bf;;
+    --color-primary-blue--dark:#026aa7;
+    --color-light-over-primary: hsla(0,0%,100%,.275);
+
+
+    --color-list-background:#ebecf0;
+    --color-list-card-background: #fff;
+    --color-list-card-background--hover:#f4f5f7;
+    --color-list-card-add-card: #55657b;
+    --color-list-card-add-card--hover: rgba(9,30,66,.08);
+
+    --header-height: 6rem;
+}
+
+html {
+    font-size: 62.5%;
+    min-width: max-content;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--color-primary-blue);
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    
+    line-height: 2rem;
+
+    height: 100vh;
+
+}
+
+.header {
+    height: var(--header-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+}
+
+.header__title {
+    position: fixed;
+}
+
+
+.header__link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header__link:hover {
+    color: var(--color-list-background);
+}
+.board {
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 0 1rem;
+    width: 100vw;
+}
+
+.list-deck {
+    display: flex;
+    overflow-x: auto;
+    color: #172b4d;
+    height: calc(100vh - var(--header-height))
+}
+
+.list-deck__list {
+    align-self: flex-start;
+    padding: .4rem 1rem 0.8rem;
+    border-radius: 3px;
+    background-color: var(--color-list-background);
+    width: 27.2rem;
+    will-change: left, top;
+}
+
+.list-deck > * {
+    margin-right: 1rem;
+}
+
+.list-deck__list-header {
+    display: flex;
+    align-items: center;
+}
+
+.list-deck__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: .4rem 0 .4rem .8rem;
+    border: none;
+    margin: .4rem 0;
+    height: 3.3rem;
+    line-height: normal;
+    flex: 1;
+    overflow: hidden;
+}
+
+.list-deck__card-list {
+    list-style: none;
+}
+
+.list-deck__card {
+    background-color: var(--color-list-card-background);
+    padding: .6rem .8rem;
+    border-radius: 3px;
+    margin-bottom: .5rem;
+    box-shadow: 0 1px 0 rgb(9 30 66 / 25%);
+    cursor: pointer;
+    display: flex;
+}
+
+.list-deck__card:hover {
+    background-color: var(--color-list-card-background--hover);
+}
+
+.list-deck__card:hover .btn--edit-card {
+    opacity: 1;
+}
+
+.list-deck__card-title {
+    font-size: inherit;
+    font-weight: inherit;
+    margin-right: auto;
+}
+
+.btn {
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn--edit-card {
+    opacity: 0;
+    padding: 1.2rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.btn--edit-card svg {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.btn--add-card {
+    padding: .6rem;
+    border-radius: 3px;
+    width: 22.8rem;
+    display: flex;
+    align-items: center;
+}
+.btn--add-card:hover {
+    background-color: var(--color-list-card-add-card--hover);
+}
+.btn--add-card:hover > .btn--add-card {
+    color: #000;
+}
+.btn--add-card:hover > * {
+    color: #000;
+    fill: #000;
+}
+
+.btn--add-card:hover > * svg {
+    color: #000;
+}
+
+.btn--add-card span {
+    line-height: 2rem;
+    margin-left: .6rem;
+}
+
+.btn--add-another-list {
+    color: var(--color-list-card-background);
+    padding: 2rem;
+    height: 3.2rem;
+    min-width: 26.4rem;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-light-over-primary);
+}
+
+.btn--add-another-list svg {
+    fill: currentColor;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.btn--add-another-list span {
+    margin-left: 0.6rem;
+}
+
+.btn--add-another-list:hover {
+    background-color: hsla(0,0%,100%,.35);
+}
+
+
+.list-deck__list-footer {
+    display: flex;
+}
+
+.list-deck__add-card {
+    color: var(--color-list-card-add-card);
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.list-deck__add-card:hover {
+    color: #000;
+}
+
+.list-deck__icon {
+    fill: var(--color-list-card-add-card);
+    height: 1.2rem;
+    width: 1.2rem;
+}
