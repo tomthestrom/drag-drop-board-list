@@ -1,4 +1,3 @@
-import throttle from "lodash/throttle";
 import { CardListElement } from "../components/CardList";
 import { ElementDimensionsRecord } from "../helpers/ElementDimensionsRecord";
 import { DragDirection } from "../helpers/Direction";
@@ -91,32 +90,19 @@ const listDrag = (function () {
       horizontalDragDir.setCurDir(curXPos);
       verticalDragDir.setCurDir(curYPos);
 
-      requestAnimationFrame(() => {
-        const leftEdge = this.calculateLeftEdge();
-        const top = this.calculateTop();
-        const rightEdge = this.calculateRightEdge();
-        const scrollDeckBy = rightEdge - this.getList().width;
+      const leftEdge = this.calculateLeftEdge();
+      const top = this.calculateTop();
+      const rightEdge = this.calculateRightEdge();
+      const scrollDeckBy = rightEdge - this.getList().width;
 
-        this.getList()?.move(leftEdge, top);
-        deck.scroll({ left: scrollDeckBy });
-      });
+      
+      const xPosDropZone = horizontalDragDir.isDirPositive()
+      ? rightEdge
+      : leftEdge;
+      dropZoneManager.insertDropZone(xPosDropZone);
 
-      const throttledInsertDropZone = throttle(
-        () => {
-          const leftEdge = this.calculateLeftEdge();
-          const rightEdge = this.calculateRightEdge();
-          const xPosDropZone = horizontalDragDir.isDirPositive()
-            ? rightEdge
-            : leftEdge;
-          dropZoneManager.insertDropZone(xPosDropZone);
-        },
-        100,
-        {
-          trailing: false,
-        }
-      );
-
-      throttledInsertDropZone();
+      this.getList()?.move(leftEdge, top);
+      deck.scroll({ left: scrollDeckBy });
     },
 
     resetState() {
