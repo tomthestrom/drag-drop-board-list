@@ -4,8 +4,6 @@ I created this repo while creating a clone of Trello and made this code public, 
 
 This is my attempt at reverse engineering the functionality of dragging and dropping the list elements on Trello board using [custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) as a way of getting familiar with [web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
 
-The styling of the elements and the whole structure of the HTML document is made for illustratory purposes, my true focus lied in implementing the functionality with vanilla javascript only. The only exception is made by using the [throttle function by Lodash](https://lodash.com/docs/4.17.15#throttle) to throttle drag events.
-
 To run the project:
 1. Download/clone this repo
 2. Open the terminal in this project's directory and run ```npm install```.
