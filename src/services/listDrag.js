@@ -90,18 +90,18 @@ const listDrag = (function () {
       horizontalDragDir.setCurDir(curXPos);
       verticalDragDir.setCurDir(curYPos);
 
+      const list = this.getList();
       const leftEdge = this.calculateLeftEdge();
       const top = this.calculateTop();
       const rightEdge = this.calculateRightEdge();
       const scrollDeckBy = rightEdge - this.getList().width;
 
-      
       const xPosDropZone = horizontalDragDir.isDirPositive()
-      ? rightEdge
-      : leftEdge;
+        ? rightEdge
+        : leftEdge;
       dropZoneManager.insertDropZone(xPosDropZone);
 
-      this.getList()?.move(leftEdge, top);
+      requestAnimationFrame(list?.move(leftEdge, top));
       deck.scroll({ left: scrollDeckBy });
     },
 

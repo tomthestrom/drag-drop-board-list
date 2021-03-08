@@ -96,8 +96,11 @@ class CardList extends HTMLElement {
   }
 
   move(left, top) {
-    this.style.left = numberWithPx(left);
-    this.style.top = numberWithPx(top);
+    return function moveList() {
+      this.style.left = numberWithPx(left);
+      this.style.top = numberWithPx(top);
+      requestAnimationFrame(() => moveList);
+    }.bind(this);
   }
 
   connectedCallback() {
