@@ -9,4 +9,14 @@ To run the project:
 2. Open the terminal in this project's directory and run ```npm install```.
 3. Run ```npm run start```, a new browser tab should open at ```http://localhost:8080/```.
 
-Finally, if you have any questions, remarks or suggestions, don't hesitate to contact me.
+- [Demo](https://drag-drop-list.herokuapp.com/)
+- [A youtube video about the functionality](https://www.youtube.com/watch?v=uiPHqvgL2d4)
+
+Summary of the video:
+1. The list (```CardList```) is being moved around with the cursor. There is a dark blue placeholder I call ```DropZone``` that gets inserted in the place the dragged list would go in case of drag end.
+2. The most important methods are called in ```services/listDrag``` which is an ```IIFE``` that returns an ```object```. The object is used by ```CardList``` (the list element) and ```ListDeck``` (the lists container) 
+3. On ```dragstart``` within the ```CardList``` element, the ```init``` method of ```listDrag``` is called.
+4. On ```dragover``` within ```ListDeck```, the ```dragOver``` method of ```listDrag``` is called.
+5. On ```dragend``` within ```CardList```, the ```resetState``` method of ```listDrag``` is called, thus the lifecycle of the helper objects created in ```init``` to help with the calculations to move around the ```ListCard``` element and the ```DropZone``` is controlled.
+
+Finally, if you have any questions, remarks or suggestions, don't hesitate to contact me
