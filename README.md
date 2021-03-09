@@ -8,6 +8,5 @@ To run the project:
 1. Download/clone this repo
 2. Open the terminal in this project's directory and run ```npm install```.
 3. Finally, run ```npm run start```, a new browser tab should open at ```http://localhost:8080/```.
-4. Try to brake it. :)
 
 Finally, if you have any questions, remarks or suggestions, don't hesitate to contact me.
