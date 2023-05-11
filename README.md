@@ -1,5 +1,8 @@
 # Drag & Drop Trello Like Board in Vanilla JS with Custom Elements
 
+UPDATE: May 11, 2023 - the code is no longer working - keeping the repo and the [video about the functionality](https://www.youtube.com/watch?v=uiPHqvgL2d4) up, there's probably been a change in the Drag&Drop API functionality. Someone commented on the vid ~2 months ago, they still found it helpful - stuff concerning the logic of how this works shouldn't have changed.
+
+//Original text: 
 I created this repo while creating a clone of Trello and made this code public, because so far I have not found a true 1:1 implementation of this feature as it is done by Trello.
 
 This is my attempt at reverse engineering the functionality of dragging and dropping the list elements on Trello board using [custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) as a way of getting familiar with [web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
@@ -9,7 +12,6 @@ To run the project:
 2. Open the terminal in this project's directory and run ```npm install```.
 3. Run ```npm run start```, a new browser tab should open at ```http://localhost:8080/```.
 
-- [Demo](https://drag-drop-list.herokuapp.com/)
 - [A youtube video about the functionality](https://www.youtube.com/watch?v=uiPHqvgL2d4)
 
 Summary of the video:
